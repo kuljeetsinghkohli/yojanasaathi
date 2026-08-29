@@ -164,7 +164,7 @@ export default function Home() {
         <div className="mx-auto max-w-2xl flex flex-col gap-8">
 
           {/* Form */}
-          {!result && (
+          {!result && !loading && (
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col gap-5">
               <div>
                 <h2 className="text-base font-semibold text-gray-900">Your Farmer Profile</h2>
