@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import HeroBanner from "@/components/HeroBanner";
 
 const STATES = [
   "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
@@ -145,22 +146,28 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-4 py-4">
-        <div className="mx-auto max-w-2xl">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl" aria-hidden="true">🌾</span>
-            <div>
-              <h1 className="text-lg font-bold text-green-800 leading-tight">YojanaSaathi</h1>
-              <p className="text-xs text-gray-500 leading-tight">Find government schemes you may be eligible for</p>
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen flex flex-col">
+      {/* Hero banner */}
+      <HeroBanner />
 
-      {/* Main */}
-      <main className="flex-1 px-4 py-8">
+      {/* Gradient bridge: blends the hero photo's bottom edge into the page texture */}
+      <div
+        aria-hidden="true"
+        style={{
+          height: "60px",
+          background: "linear-gradient(to bottom, #4a6741, #f2ede4)",
+        }}
+      />
+
+      {/* Main — textured background */}
+      <main
+        className="flex-1 px-4 py-8"
+        style={{
+          backgroundImage: "url('/images/page-bg-texture.jpg')",
+          backgroundSize: "cover",
+          backgroundRepeat: "repeat",
+        }}
+      >
         <div className="mx-auto max-w-2xl flex flex-col gap-8">
 
           {/* Form */}
