@@ -8,8 +8,8 @@ import Image from "next/image";
  * so the alt text carries that information for screen readers.
  *
  * Heights:
- *   mobile  (<640 px) : 200px – 240px  →  h-[210px]
- *   desktop (≥640 px) : 340px – 420px  →  sm:h-[380px]
+ *   mobile  (<640 px) : ~120px  →  h-[120px]
+ *   desktop (≥640 px) : ~160px  →  sm:h-[160px]
  *
  * object-position:
  *   mobile  : "top left"  so the baked-in title (top-left corner) stays
@@ -18,7 +18,7 @@ import Image from "next/image";
  */
 export default function HeroBanner() {
   return (
-    <div className="relative w-full h-[210px] sm:h-[380px] overflow-hidden">
+    <div className="relative w-full h-[120px] sm:h-[160px] overflow-hidden">
       <Image
         src="/images/hero-yojanasaathi.jpg"
         alt="YojanaSaathi — your AI companion for government welfare schemes"
